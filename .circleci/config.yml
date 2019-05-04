@@ -2,17 +2,15 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python3.6.1
+      - image: debian:stretch
+
     steps:
       - checkout
+
       - run:
-        name: install dependencies
-        command: |
-          python3 -m venv venv
-          .venv/bin/activate
+          name: Greeting
+          command: echo Hello, world.
+
       - run:
-        name: run tests
-        command: |
-          .venv/bin/activate
-          pytest
-          
+          name: Print the Current Time
+          command: date
