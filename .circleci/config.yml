@@ -11,7 +11,8 @@ jobs:
           name: install dependencies
           command: |
             echo Hello, world.
-            pip3 install pytest
+            sudo pip install --upgrade pip
+            sudo pip install pytest
             pytest .
 
       - run:
