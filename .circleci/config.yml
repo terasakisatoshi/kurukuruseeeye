@@ -13,8 +13,9 @@ jobs:
             echo Hello, world.
             sudo pip install --upgrade pip
             sudo pip install pytest
+      - run:
+          name: run pytest
             pytest .
-
       - run:
           name: Print the Current Time
           command: date
